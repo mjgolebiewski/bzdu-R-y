@@ -7,7 +7,7 @@
 # zapisanie pliku jako pliku tekstowego z metadanymi; posiada min. informacje o typach
 # danych w kolumnach; podobno lepiej wspopracuje z systemami kontrolii wersji
 
-dx <- dget(file = 'dput_test.txt') 
+dx <- dget(file = 'dput_test.txt')
 # odczytanie danych zapisanych dput
 
 xd <- read.csv('dane_testowe.csv')

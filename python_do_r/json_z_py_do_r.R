@@ -1,3 +1,7 @@
+# https://google.github.io/styleguide/Rguide.xml
+# dlaczego jeszcze nie ma addina ktory to sprawdza? cos jak te standardy
+# do pythona, pep8 i w ogole
+
 "
 Extracting Data from JSON
 
@@ -27,21 +31,22 @@ and enter the sum below:
 # jeszcze wystarczajaco r-(py)-thonic ale dziala okej?
 install.packages('curl')
 install.packages('jsonlite')
+install.packages('fakeR')
+install.packages('polycor')
 library(jsonlite)
 library(curl)
+library(fakeR)
 
-wczytanieLinku <- function()
-{
-    n <- readline(prompt = "wpisz link do jsona: ")
-    ng <- fromJSON(n)
-    return(ng)
+wczytanieLinku <- function() {
+  n <- readline(prompt = "wpisz link do jsona: ")
+  ng <- fromJSON(n)
+  return(ng)
 }    
 
-sumowanko <- function()
-{
-    ling <- wczytanieLinku()
-    print(toJSON(ling, pretty = TRUE))
-    print(as.integer(sum(ling$comments$count)))
+sumowanko <- function() {
+  ling <- wczytanieLinku()
+  print(toJSON(ling, pretty = TRUE))
+  print(as.integer(sum(ling$comments$count)))
 }
 
 # link do testow:

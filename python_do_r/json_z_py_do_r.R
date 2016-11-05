@@ -41,6 +41,6 @@ wczytanieLinku <- function()
 # http://python-data.dr-chuck.net/comments_302554.json
 ling <- wczytanieLinku()
 print(toJSON(ling, pretty = TRUE))
-print(sum(ling$comments$count))
+print(as.integer(sum(ling$comments$count)))
 
 
